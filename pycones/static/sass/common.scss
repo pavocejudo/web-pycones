@@ -3,7 +3,7 @@
 // Font Variables
 $sourcecode: 'Source Code Pro', monospace;
 $firacode:  'Fira Code', monospace;
-
+$open_sans: 'Open Sans', sans-serif;
 
 
 
@@ -13,15 +13,18 @@ $firacode:  'Fira Code', monospace;
 
 
 .acorn-background {
-  background: url("../images/header.jpg") no-repeat;
+  //background: url("../images/header.jpg") no-repeat;
   background-size: cover;
-  height: 250px;
+  //height: 250px
+        background: rgba(0,0,0,0.6);
+
   .main-title{
     text-align: center;
     vertical-align: middle;
     padding-top: 40px;
     h1{
-      font-family: $firacode;
+      padding: 20px 0;
+      font-family: $open_sans;
       font-size: 6em;
       color: white;
       font-weight: bold;
@@ -34,6 +37,66 @@ $firacode:  'Fira Code', monospace;
     }
   }
 }
+
+$logo-width-header: 100px;
+$logo-height-header: 50px;
+.logo_header{
+  width: $logo-width-header;
+  height: $logo-height-header;
+}
+
+.hero-image{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.m-hero-video-holder {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    padding-top: 0;
+    overflow: hidden;
+}
+
+.m-hero-video-holder .m-hero-video-container, .m-hero-video-holder embed, .m-hero-video-holder iframe, .m-hero-video-holder video {
+    position: absolute;
+    left: 0;
+    top: -4%;
+    width: 100%;
+    height: 100%;
+}
+.m-hero-video-holder .m-hero-video-container {
+    padding-top: 0;
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.m-hero-video-container .acorn-background{
+  //position: absolute;
+//top: 35%;
+z-index: 100;
+display: block;
+width: 100%;
+text-align: center;
+margin-left: 0px;
+padding: 0;
+}
+
+.acorn-background{
+  opacity: 0;
+  animation: fadeInOpacity 2s 6s forwards;
+}
+
+@keyframes fadeInOpacity {
+ to {
+    opacity: 1;
+  }
+}
+
+
+
+
 
 $logo-width: 495px;
 $logo-height: 400px;

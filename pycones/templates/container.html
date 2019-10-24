@@ -4,13 +4,30 @@
 
 {% block container %}
   {% block claim %}
-    <div class="claim acorn-background">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 main-title">
-            <h1>PyconES <span>Granada</span></h1>
+{#    <div class="claim acorn-background">#}
+{#      <div class="container">#}
+{#        <div class="row">#}
+{#          <div class="col-md-12 main-title">#}
+{#            <h1>PyConES <span>Granada</span></h1>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+    <div class="hero-image">
+      <div class="m-hero-video-holder">
+          <div class="m-hero-video-container">
+            <div class="acorn-background">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 main-title">
+                  <img src="{% static "img/logo-small.png" %}" width="200px">
+                  <h1>PyConES <span>Granada</span></h1>
+                </div>
+              </div>
+            </div>
+            </div>
+            <video src="{% static "img/alhambra-timelapse.mp4" %}" class="m-hero-item m-hero-item--video x-hidden-focus" autoplay="" muted="" playsinline=""></video>
           </div>
-        </div>
       </div>
     </div>
   {% endblock claim %}
